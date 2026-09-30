@@ -1,12 +1,12 @@
-const sname="Sifat";
-let marks=[40, 50, 60, 80, 90];
+const sname = "Sifat";
+let marks = [40, 50, 60, 80, 90];
 marks.push(70);
 
 function Total(marks) {
   let total=0;
   for (let i=0; i<marks.length; i++) {
     total=total+marks[i];
-  }console.log("Total Marks: ", total);
+  } console.log("Total Marks: ", total);
 }
 
 function Avarage(marks) {
@@ -22,11 +22,11 @@ function Avarage(marks) {
 function Grade(avarage) {
   if (avarage>=85) {
     console.log("A");
-  } else if (avarage>=75) {
+  } else if (avarage >= 75) {
     console.log("B");
-  } else if (avarage>=65) {
+  } else if (avarage >= 65) {
     console.log("C");
-  } else if (avarage>=60) {
+  } else if (avarage >= 60) {
     console.log("D");
   } else {
     console.log("F");
@@ -37,18 +37,20 @@ function Result(marks) {
   for (let i=0; i<marks.length; i++) {
     if (marks[i]<50) {
       console.log("Fail");
-      return;
+    } else {
+      console.log("Pass");
     }
-  }console.log("Pass");
+  } 
+  
 }
 
 function findHighestMark(marks) {
   let heightst=marks[0];
-  for (let i=1; i<marks.length; i++) {
+  for (let i= 1; i<marks.length; i++) {
     if (marks[i]>heightst) {
       heightst=marks[i];
     }
-  }console.log("Highest Marks: ", heightst);
+  } console.log("Highest Marks: ", heightst);
 }
 
 function countPassedSubjects(marks) {
@@ -57,7 +59,7 @@ function countPassedSubjects(marks) {
     if (marks[i]>=50) {
       count++;
     }
-  }console.log("Passed Student: ", count);
+  } console.log("Passed Student: ", count);
 }
 
 console.log("Student Name: ", sname);
